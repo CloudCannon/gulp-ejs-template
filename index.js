@@ -8,7 +8,7 @@ module.exports = function processEJS(options) {
 	options = options || {};
 	options.base = options.base || "";
 
-	return through2.obj(function (file, encoding, callback) {
+	return through.obj(function (file, encoding, callback) {
 		var content, template, key;
 		if (file.isNull()) {
 			return callback(null, file);
