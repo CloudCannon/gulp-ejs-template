@@ -1,8 +1,8 @@
 # @cloudcannon/gulp-ejs-template
 
-🔧 create a compiled ejs file with window.JST exposed
+🔧 create a compiled ejs file with window.JST exposed. Uses underscore's template function to match the rails pipeline.
 
-> ejs plugin for [gulp](https://github.com/CloudCannon/gulp-ejs-template)
+> ejs template plugin for [gulp](https://github.com/CloudCannon/gulp-ejs-template)
 
 ## Usage
 
@@ -23,10 +23,10 @@ var gap = require("gulp-append-prepend");
 gulp.task("ejs", function () {
 	return gulp.src("templates/**/*.jst.ejs")
 		.pipe(ejs())
-    .pipe(rename(function (path) {
-      path.extname = ".js";
-    }))
-    .pipe(concat(".jst-cache.js"))
+		.pipe(rename(function (path) {
+			path.extname = ".js";
+		}))
+		.pipe(concat(".jst-cache.js"))
 		.pipe(gap.prependText("window.JST = window.JST || {};"))
 		.pipe(gulp.dest("app/assets/javascripts/"));
 });
