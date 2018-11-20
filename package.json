@@ -1,6 +1,6 @@
 {
   "name": "@cloudcannon/gulp-ejs-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🔧 create a compiled ejs file with window.JST exposed",
   "main": "index.js",
   "scripts": {
